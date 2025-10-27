@@ -80,13 +80,18 @@ int main()
             float nota = cal[i][j];
             suma_asig += nota;
             
-            if(nota< min_notaA)
+            if(nota < min_notaA)
             {
                 min_notaA = nota;
             }
-            if(nota> max_notaA)
+            if(nota > max_notaA)
             {
                 max_notaA = nota;
+            }
+
+            // Hay que contabilizar los aprobados xdd ya le agregue esta parte
+            if (nota >= nota_apro) {
+                aprobados++;
             }
         }
         
@@ -124,8 +129,9 @@ int main()
         printf("Calificacion mas alta: %.2f \n", max_asig[j]);
         printf("Calificacion mas baja: %.2f \n", min_asig[j]);
         
-        printf("Estudiantes aprobados: %.2f \n", aprobados_asig[j]);
-        printf("Estudiantes reprobados: %.2f \n", reprobados_asig[j]);
+        // Usar %d para enteros los aprobados no son float xdddd
+        printf("Estudiantes aprobados: %d \n", aprobados_asig[j]);
+        printf("Estudiantes reprobados: %d \n", reprobados_asig[j]);
         
         printf("\n");
     }
