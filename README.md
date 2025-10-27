@@ -119,13 +119,13 @@ int main()
     
     for(int j = 0; j< asignaturas; j++)
     {
-        printf("Asignatura %d: \n", i+1);
+        printf("Asignatura %d: \n", j+1);
         printf("Promedio: %.2f \n", prom_asig[j]);
         printf("Calificacion mas alta: %.2f \n", max_asig[j]);
         printf("Calificacion mas baja: %.2f \n", min_asig[j]);
         
         printf("Estudiantes aprobados: %.2f \n", aprobados_asig[j]);
-        printf("Estudiantes reprobados: %.2f \n", reprobados_asig[i]);
+        printf("Estudiantes reprobados: %.2f \n", reprobados_asig[j]);
         
         printf("\n");
     }
